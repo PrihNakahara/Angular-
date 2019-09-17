@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  padding-top: 110px;
+}
+
+.carousel-inner,.img {
+  height: 30rem;
+}
+.page-footer{
+  background-color: #e3f2fd;
+}
+
+.page-section {
+  padding: 100px 0;
+}
+
+.mx-auto {
+  width: 13rem;
+  height: 14rem;
+}

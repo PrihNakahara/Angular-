@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="container">
+  <div>
+    <h1 class="text-center mb-5 "> Descreva seu Produto</h1>
+  </div>
+  <form (ngSubmit)="onSubmit()">
+    <h3>Coloque as características do produto</h3>
+    <br>
+    <br>
+    <div class="form-group ml-3">
+      <label for="nome">Nome do produto</label>
+      <input type="text"
+             class="form-control"
+             id="nome"
+             placeholder="cadeira/ muletas"
+             [(ngModel)]="produto.nome"
+             name="nome">
+    </div>
+    <div class="form-group ml-3">
+      <label for="valor">Valor do produto</label>
+      <input type="text"
+             class="form-control"
+             id="valor"
+             placeholder="R$..."
+             [(ngModel)]="produto.valor"
+             name="valor">
+    </div>
+    <div class="form-group ml-3">
+      <div class="form-group">
+        <label for="descricao">Descrição do produto</label>
+        <input type="text" class="form-control"
+                  id="descricao"
+                  placeholder="ex: cadeira de rodas, preta..."
+                  [(ngModel)]="produto.descricao"
+                  name="descricao">
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-secondary btn-lg active mb-5" role="button" >publicar</button>
+    <button class="btn btn-secondary btn-lg active mb-5" role="button" (click)="goToHome()">voltar</button>
+  </form>
+</div>
+<app-footer></app-footer>

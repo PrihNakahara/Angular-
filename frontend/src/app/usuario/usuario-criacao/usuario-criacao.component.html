@@ -1,0 +1,68 @@
+<app-header></app-header>
+  <h3>Complete seu cadastro</h3>
+  <form (ngSubmit)="onSubmit()">
+  <div class="for-row ">
+    <div class="col mb-3">
+      <input type="text"
+             class="form-control"
+             placeholder="Nome"
+             [(ngModel)]="usuario.nome"
+             name="nome">
+    </div>
+    <div class="col mb-3">
+      <input type="text"
+             class="form-control"
+             placeholder="CPF"
+             [(ngModel)]="usuario.cpf"
+             name="cpf">
+    </div>
+    <div class="col mb-3">
+      <input type="text"
+             class="form-control"
+             placeholder="Endereço"
+             [(ngModel)]="usuario.endereco"
+             name="endereco">
+    </div>
+    <div class="o-grid__item -xs-24 ml-3">
+      <div class="o-form__field">
+        <label>Sexo:</label>
+        <div class="o-grid__item -xs-shrink">
+          <label class="o-radio -xs-medium -md-large">
+          <input type="radio"
+                 class="o-radio__input "
+                 id="radio-fe2521cb"
+                 name="product[used]"
+                 value="M"
+                 data-bind="checked: data.used, checkedValue: M"
+                 data-validate="true"
+                 data-patterns="isChecked"
+                 data-target=""
+                 data-action=""
+                 [(ngModel)]="usuario.sexo">
+          <span class="o-radio__label">Masculino</span>
+          </label>
+        </div>
+        <div class="o-grid__item -xs-shrink">
+          <label class="o-radio -xs-medium -md-large">
+            <input type="radio"
+                   class="o-radio__input "
+                   id="radio-857089c8"
+                   name="product[used]"
+                   value="F"
+                   data-bind="checked: data.used, checkedValue: F"
+                   data-validate="true"
+                   data-patterns="isChecked"
+                   data-target=""
+                   data-action=""
+                   [(ngModel)]="usuario.sexo">
+            <span class="o-radio__label">Feminino</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+    <button class="btn btn-secondary btn-lg active mb-5" role="button" >Criar</button>
+    <button class="btn btn-secondary btn-lg active mb-5" role="button" (click)="goToHome()">voltar</button>
+</form>
+<br>
+<app-footer></app-footer>
